@@ -39,10 +39,10 @@ export default {
           title:'MAQC Consortium',
           link:'https://themaqc.org/',
           subList:[
-            {title:'MAQC-I', subtitle: 'RNA MicroArray', img:'/Collaboration/MAQC/maqc1.png', url:'https://www.nature.com/collections/mtqqkzsptk?_gl=1*acaub0*_up*MQ..&gclid=CjwKCAjwtNi0BhA1EiwAWZaANEhe2ec2YXzp8zvFD4oITx5Up6QvSreM04WnUzrQdiOqnwsx8OYCEBoCTSEQAvD_BwE'},
-            {title:'MAQC-II', subtitle: 'Predictive Models', img:'/Collaboration/MAQC/maqc2.png', url:'https://www.nature.com/collections/tlrcqxrcdx?_gl=1*1k70o2a*_up*MQ..&gclid=CjwKCAjwtNi0BhA1EiwAWZaANEhe2ec2YXzp8zvFD4oITx5Up6QvSreM04WnUzrQdiOqnwsx8OYCEBoCTSEQAvD_BwE'},
-            {title:'MAQC-III (SEQC)', subtitle: 'RNA-seq', img:'/Collaboration/MAQC/maqc3.png', url:'https://www.nature.com/collections/ppgrhzcwpf?_gl=1*1la4kxb*_up*MQ..&gclid=CjwKCAjwtNi0BhA1EiwAWZaANEhe2ec2YXzp8zvFD4oITx5Up6QvSreM04WnUzrQdiOqnwsx8OYCEBoCTSEQAvD_BwE'},
-            {title:'MAQC-IV (SEQC2)', subtitle: 'DNA-seq', img:'/Collaboration/MAQC/maqc4.png', url:'https://www.nature.com/collections/fjhdjcdefg?_gl=1*zuw7vr*_up*MQ..&gclid=CjwKCAjwtNi0BhA1EiwAWZaANEhe2ec2YXzp8zvFD4oITx5Up6QvSreM04WnUzrQdiOqnwsx8OYCEBoCTSEQAvD_BwE'},
+            {title:'MAQC-I', subtitle: 'RNA MicroArray', img:'./Collaboration/MAQC/maqc1.webp', url:'https://www.nature.com/collections/mtqqkzsptk?_gl=1*acaub0*_up*MQ..&gclid=CjwKCAjwtNi0BhA1EiwAWZaANEhe2ec2YXzp8zvFD4oITx5Up6QvSreM04WnUzrQdiOqnwsx8OYCEBoCTSEQAvD_BwE'},
+            {title:'MAQC-II', subtitle: 'Predictive Models', img:'./Collaboration/MAQC/maqc2.webp', url:'https://www.nature.com/collections/tlrcqxrcdx?_gl=1*1k70o2a*_up*MQ..&gclid=CjwKCAjwtNi0BhA1EiwAWZaANEhe2ec2YXzp8zvFD4oITx5Up6QvSreM04WnUzrQdiOqnwsx8OYCEBoCTSEQAvD_BwE'},
+            {title:'MAQC-III (SEQC)', subtitle: 'RNA-seq', img:'./Collaboration/MAQC/maqc3.webp', url:'https://www.nature.com/collections/ppgrhzcwpf?_gl=1*1la4kxb*_up*MQ..&gclid=CjwKCAjwtNi0BhA1EiwAWZaANEhe2ec2YXzp8zvFD4oITx5Up6QvSreM04WnUzrQdiOqnwsx8OYCEBoCTSEQAvD_BwE'},
+            {title:'MAQC-IV (SEQC2)', subtitle: 'DNA-seq', img:'./Collaboration/MAQC/maqc4.webp', url:'https://www.nature.com/collections/fjhdjcdefg?_gl=1*zuw7vr*_up*MQ..&gclid=CjwKCAjwtNi0BhA1EiwAWZaANEhe2ec2YXzp8zvFD4oITx5Up6QvSreM04WnUzrQdiOqnwsx8OYCEBoCTSEQAvD_BwE'},
 
           ]
         }

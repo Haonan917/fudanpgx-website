@@ -41,17 +41,17 @@ const actions = {
     async fetchMembersFromJson({ commit }) {
         try {
             console.time('fetchMembers'); // 记录开始时间
-            const response = await axios.get('/Resource/members_convert.json', { timeout: 1000000 });
+            const response = await axios.get('./Resource/members_convert.json', { timeout: 1000000 });
             console.log("response", response);
 
 
             let members = await Promise.all(response.data.map(async (member) => {
 
-                const avatarUrl = '/Resource/members/'+ member.avatar
+                member.avatar = './Resource/members/'+ member.avatar
                 // 使用 fetch 加载图片文件并转换为 Base64
-                const imageBase64 = await convertImageToBase64(avatarUrl);  // 改为直接调用函数
+                // const imageBase64 = await convertImageToBase64(avatarUrl);  // 改为直接调用函数
                 // console.log(imageBase64);
-                member.avatar = imageBase64;
+                // member.avatar = imageBase64;
 
                 return member;
             }));
@@ -74,26 +74,26 @@ const actions = {
 };
 
 // 异步函数：将图片转换为 Base64
-async function convertImageToBase64(url) {
-    try {
-        const response = await fetch(url);
-        const blob = await response.blob();
-        const reader = new FileReader();
-
-        return new Promise((resolve, reject) => {
-            reader.onloadend = () => {
-                resolve(reader.result); // 返回 Base64 编码的 Data URL
-            };
-            reader.onerror = reject;
-
-            // 读取文件为 Data URL（Base64 编码）
-            reader.readAsDataURL(blob);
-        });
-    } catch (error) {
-        console.error('Error in converting image to Base64:', error);
-        throw error;
-    }
-}
+// async function convertImageToBase64(url) {
+//     try {
+//         const response = await fetch(url);
+//         const blob = await response.blob();
+//         const reader = new FileReader();
+//
+//         return new Promise((resolve, reject) => {
+//             reader.onloadend = () => {
+//                 resolve(reader.result); // 返回 Base64 编码的 Data URL
+//             };
+//             reader.onerror = reject;
+//
+//             // 读取文件为 Data URL（Base64 编码）
+//             reader.readAsDataURL(blob);
+//         });
+//     } catch (error) {
+//         console.error('Error in converting image to Base64:', error);
+//         throw error;
+//     }
+// }
 
 export default {
     namespaced: true,

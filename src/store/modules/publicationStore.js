@@ -123,16 +123,16 @@ const actions = {
         try {
             console.time('fetchPublication'); // 记录开始时间
             // 使用并行化获取多个数据源（如果有其他需要获取的资源）
-            const response = await axios.get('/Resource/scopus_convert.json', { timeout: 100000 });
+            const response = await axios.get('./Resource/scopus_convert.json', { timeout: 100000 });
 
             const publications = await Promise.all(response.data.map(async (pub) => {
                 // 避免重复的转换操作
                 if (pub.img) {
                     // pub.img = `data:image/png;base64,${pub.img}`;
-                    const imgUrl = '/Resource/publication/webps/'+ pub.img
-                    const imageBase64 = await convertImageToBase64(imgUrl);  // 改为直接调用函数
-                    // console.log(imageBase64);
-                    pub.img = imageBase64;
+                    pub.img = './Resource/publication/webps/'+ pub.img
+                    // const imageBase64 = await convertImageToBase64(imgUrl);  // 改为直接调用函数
+                    // // console.log(imageBase64);
+                    // pub.img = imageBase64;
                 }
 
                 if (Array.isArray(pub.author)) {
@@ -181,27 +181,10 @@ const actions = {
 
 
 };
-async function convertImageToBase64(url) {
-    try {
-        const response = await fetch(url);
-        const blob = await response.blob();
-        const reader = new FileReader();
-
-        return new Promise((resolve, reject) => {
-            reader.onloadend = () => {
-                resolve(reader.result); // 返回 Base64 编码的 Data URL
-            };
-            reader.onerror = reject;
-
-            // 读取文件为 Data URL（Base64 编码）
-            reader.readAsDataURL(blob);
-        });
-    } catch (error) {
-        console.error('Error in converting image to Base64:', error);
-        throw error;
-    }
-}
-
+// async function convertImageToBase64(url) {
+//     try {
+//         const response = await fetch(url);
+//         const blob = await response
 
 export default {
     namespaced: true,

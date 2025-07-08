@@ -77,14 +77,15 @@ const actions = {
         }
 
         try {
-            const response = await axios.get('/Resource/news_convert.json',{ timeout: 100000});
+            const response = await axios.get('./Resource/news_convert.json',{ timeout: 100000});
             console.log("response",response)
-            let newsList = response.data.map(news => {
+            let newsList =  await Promise.all(response.data.map(async (news) => {
                 if (news.cover) {
-                    news.cover = `data:image/png;base64,${news.cover}`;
+                    news.cover = './Resource/news/'+ news.cover;
                 }
                 return news;
-            });
+            }));
+
             // 按时间排序
             newsList.sort((a, b) => {
                 return new Date(b.time) - new Date(a.time); // 直接比较时间戳

@@ -20,7 +20,7 @@
               <div class="el-row" style="margin-top: 30px">
                 <div class="el-col-2">
                   <div class="icon-box">
-                    <img src="/About/contact/team.svg" class="icon-img">
+                    <img :src="teamIcon" class="icon-img">
                   </div>
                 </div>
                 <div class="el-col-14" >
@@ -31,7 +31,7 @@
                 </div>
                 <div class="el-col-2">
                   <div class="icon-box">
-                    <img src="/About/contact/institution.svg" class="icon-img">
+                    <img :src="institutionIcon" class="icon-img">
                   </div>
                 </div>
                 <div class="el-col-6">
@@ -45,7 +45,7 @@
               <div class="el-row" style="margin-top: 50px">
                 <div class="el-col-2">
                   <div class="icon-box">
-                    <img src="/About/contact/address.svg" class="icon-img">
+                    <img :src="addressIcon" class="icon-img">
                   </div>
                 </div>
                 <div class="el-col-14">
@@ -56,7 +56,7 @@
                 </div>
                 <div class="el-col-2">
                   <div class="icon-box">
-                    <img src="/About/contact/mail.svg" class="icon-img">
+                    <img :src="mailIcon" class="icon-img">
                   </div>
                 </div>
                 <div class="el-col-6">
@@ -93,10 +93,14 @@ export default {
   data(){
     return{
       imgList:[
-        {img:'/About/photos/a.jpg', date:'2023-05-01'},
-        {img:'/About/photos/b.jpg', date:'2023-05-01'},
-        {img:'/About/photos/c.jpg', date:'2023-05-01'}
+        {img:'./About/photos/a.webp', date:'2023-05-01'},
+        {img:'./About/photos/b.webp', date:'2023-05-01'},
+        {img:'./About/photos/c.webp', date:'2023-05-01'}
       ],
+      addressIcon:'./About/contact/address.svg',
+      institutionIcon:'./About/contact/institution.svg',
+      mailIcon:'./About/contact/mail.svg',
+      teamIcon:'./About/contact/team.svg',
     }
   },
 

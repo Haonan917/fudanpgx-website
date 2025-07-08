@@ -5,8 +5,8 @@
         <div class="header-row el-row">
           <div class="el-col-2" >
             <div style="padding-top: 0.1vw;padding-left: 3vw;">
-              <a href="/">
-                <img src="/logo.png" alt="HumPoPG-log0" style="width: 6vw;">
+              <a href="./">
+                <img :src="logo" alt="HumPoPG-log0" style="width: 6vw;">
               </a>
             </div>
           </div>
@@ -42,7 +42,8 @@ export default {
   },
   data() {
     return {
-      isActive: 0
+      isActive: 0,
+      logo:'./logo.png'
     }
   },
   computed: {

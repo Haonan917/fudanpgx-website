@@ -45,7 +45,7 @@ const actions = {
     async fetchAlumnisFromJson({ commit }) {
 
         try {
-            const response = await axios.get('/Resource/alumnis_convert.json',{ timeout: 100000});
+            const response = await axios.get('./Resource/alumnis_convert.json',{ timeout: 100000});
             console.log("response",response)
             const alumnis = response.data.map(alumni => {
                 return alumni;

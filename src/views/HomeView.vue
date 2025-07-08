@@ -1,6 +1,6 @@
 <template>
   <div class="container-wrapper">
-    <img src="/Home/members.jpg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1"/>
+    <img :src="defaultImage" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1"/>
      <section class="carousel-container">
 
        <div style="position:relative; width: 100%; height: 100vh;overflow: hidden">
@@ -49,7 +49,7 @@
       </div>
       <div class="el-row research-section-item">
         <div class="el-col-12 section-image">
-          <img src="/Home/QC.png" style="width: 70%; height: auto; margin: auto">
+          <img :src="qcImage" style="width: 70%; height: auto; margin: auto" alt="">
         </div>
         <div class="el-col-12">
           <div class="section-subheading">Quality Control of Multi-Omics Data</div>
@@ -67,13 +67,13 @@
           </div>
         </div>
         <div class="el-col-12 section-image">
-          <img src="/Home/pharmacogenomics.png" style="width: 70%;height: auto; margin: auto">
+          <img :src="pgxImage" style="width: 70%;height: auto; margin: auto">
         </div>
 
       </div>
       <div class="el-row research-section-item">
         <div class="el-col-12 section-image">
-          <img src="/Home/cancer.png" style="width: 60%;height: auto; margin: auto">
+          <img :src="cancerImage" style="width: 60%;height: auto; margin: auto">
         </div>
         <div class="el-col-12">
           <div class="section-subheading">Cancer Precision Medicine</div>
@@ -126,7 +126,7 @@
     <section id="footer-section" class="footer-section">
       <div class="el-row" >
         <div class="el-col-5 section-image" style="height: 20vh">
-          <img src="/Home/footer/fudan.png" style="width: 35%">
+          <img :src="footFudan" style="width: 35%">
         </div>
 
         <div class="el-col-14 section-image">
@@ -134,7 +134,7 @@
         </div>
         <div class="el-col-5 section-image" style="height: 20vh">
 <!--          <RevolverMap></RevolverMap>-->
-          <img src="/Home/footer/global.png" style="width: 40%">
+          <img :src="footGlobal" style="width: 40%">
         </div>
       </div>
     </section>
@@ -163,13 +163,12 @@ export default {
   },
   data(){
     return {
-      defaultImage:{url:'/Home/home.jpg', name:'contact', title: 'Welcome to Fudan PGx', button: 'Contact'},
-      homeImages:[
-        {url:'/Home/news/outstanding_youth.png', name:'youth', title: '祝贺团队郑媛婷副教授获2024年国家杰出青年资金资助', link:''},
-        {url:'/Home/news/reference_material.jpg', name:'omics', title: '全球首套多组学标准物质中华家系1号发布', link:''},
-        {url:'/Home/news/seqc2.png', name:'SEQC2', title: '《自然·生物技术》刊发国际组学数据质量控制联盟最新研究成果', link:''}
-
-      ],
+      defaultImage:'./Home/members.webp',
+      qcImage:'./Home/QC.webp',
+      pgxImage:'./Home/pharmacogenomics.webp',
+      cancerImage:'./Home/cancer.webp',
+      footFudan:'./Home/fudan.webp',
+      footGlobal: './Home/global.webp',
       wordsLimit: 76,
       vantaEffect:null
     }
